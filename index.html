@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kost Eksklusif di Grogol</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fa; }
+    header { background: #0056b3; color: white; padding: 20px; text-align: center; }
+    nav { background: #003d82; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    section { padding: 40px; }
+    .kamar { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    footer { background: #003d82; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    button { background: #0056b3; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #003d82; }
+    form { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+    input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    .whatsapp-button { display: inline-block; margin-top: 20px; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .whatsapp-button:hover { background-color: #1ebe57; }
+    iframe { width: 100%; border: 0; margin-top: 20px; border-radius: 10px; }
+  </style>
+  <script>
+    function kirimBooking(event) {
+      event.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const telepon = document.getElementById('telepon').value;
+      const tipeKamar = document.getElementById('tipeKamar').value;
+      const pesan = document.getElementById('pesan').value;
+      const nomorWA = '628121228880';
+      const text = `Halo, saya ingin booking kamar di Kost Eksklusif di Grogol.%0A%0ANama: ${nama}%0AEmail: ${email}%0ANomor Telepon: ${telepon}%0ATipe Kamar: ${tipeKamar}%0APesan Tambahan: ${pesan}`;
+      window.open(`https://wa.me/${nomorWA}?text=${text}`, '_blank');
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Kost Eksklusif di Grogol</h1>
+  <p>Kenyamanan dan Keamanan Hunian Terbaik</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#kamar">Daftar Kamar</a>
+  <a href="#booking">Booking</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+<section id="home">
+  <h2>Selamat Datang di Kost Eksklusif di Grogol</h2>
+  <p>Temukan kenyamanan tinggal di kost eksklusif kami dengan fasilitas lengkap dan lokasi strategis dekat kampus dan perkantoran.</p>
+  <a href="#booking"><button>Booking Sekarang</button></a>
+</section>
+
+<section id="kamar">
+  <h2>Daftar Kamar</h2>
+  <div class="kamar">
+    <div class="card">
+      <h3>Kamar Standard</h3>
+      <p>Rp 2.000.000 / bulan</p>
+      <p>Fasilitas: AC, Wifi, Kamar Mandi Dalam</p>
+    </div>
+    <div class="card">
+      <h3>Kamar Executive</h3>
+      <p>Rp 2.500.000 / bulan</p>
+      <p>Fasilitas: AC, Wifi, TV, Kamar Mandi Dalam, Air Panas</p>
+    </div>
+    <div class="card">
+      <h3>Kamar Suite</h3>
+      <p>Rp 3.000.000 / bulan</p>
+      <p>Fasilitas: AC, Wifi, TV, Lemari Besar, Balkon, Air Panas, Kulkas Dalam Kamar</p>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Formulir Booking</h2>
+  <form onsubmit="kirimBooking(event)">
+    <label for="nama">Nama Lengkap:</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telepon">Nomor Telepon:</label>
+    <input type="text" id="telepon" name="telepon" required>
+
+    <label for="tipeKamar">Pilih Tipe Kamar:</label>
+    <select id="tipeKamar" name="tipeKamar" required>
+      <option value="Standard">Kamar Standard</option>
+      <option value="Executive">Kamar Executive</option>
+      <option value="Suite">Kamar Suite</option>
+    </select>
+
+    <label for="pesan">Pesan Tambahan:</label>
+    <textarea id="pesan" name="pesan" rows="4"></textarea>
+
+    <button type="submit">Kirim Booking</button>
+  </form>
+
+  <a class="whatsapp-button" href="https://wa.me/628121228880" target="_blank">Hubungi via WhatsApp</a>
+</section>
+
+<section id="kontak">
+  <h2>Kontak Kami</h2>
+  <p>Alamat: Jl. Arga Raya No.15, Kotasari, Kec. Gerogol, Kota Cilegon, Banten 42436</p>
+  <p>WhatsApp: <a href="https://wa.me/628121228880" style="color:white; text-decoration:underline;">0812-1228-880</a></p>
+  <p>Email: grogolmansion@gmail.com</p>
+  <iframe src="https://www.google.com/maps?q=-5.9888682339244905,106.02388345044058&hl=id&z=16&output=embed" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<footer>
+  <p>&copy; 2025 Kost Eksklusif di Grogol. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
